@@ -1,0 +1,17 @@
+body{
+    background-size: cover;
+}
+
+.HEDER{
+    width: 100%;
+    margin: 0px;
+    font-size: x-large;
+}
+
+.NOTE{
+    font-size: large;
+}
+
+.DISPLAY{
+    font-size: large;
+}
