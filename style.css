@@ -15,3 +15,9 @@ body{
 .DISPLAY{
     font-size: large;
 }
+
+canvas{
+    margin-top:150px;
+    border-radius: 50px;
+    border: 10px blue dashed;
+}
