@@ -5,6 +5,8 @@ LWX="";
 LWY="";
 RWX="";
 RWY="";
+keyLW="0";
+LS="";
 
 function preload(){
     song1=loadSound("music.mp3");
@@ -24,6 +26,18 @@ function setup(){
 
 function draw(){
     image(video, 0, 0, 400, 400);
+
+    fill("red");
+    stroke("red");
+    LS=song1.isPlaying();
+    if(keyLW>0.2){
+        circle(LWX, LWY, 20);
+        song2.stop();
+        if(LS==false){
+            song1.play();
+            document.getElementById("song").innerHTML="Song playing: Harry Potter Theme";
+        }
+    }
 }
 
 function modelLoaded(){
@@ -38,6 +52,7 @@ function gotPoses(results){
         LWY=results[0].pose.leftWrist.y;
         RWX=results[0].pose.rightWrist.x;
         RWY=results[0].pose.rightWrist.y;
+        keyLW=results[0].pose.keypoints[9].score;
 
         console.log("LWX: "+LWX);
         console.log("LWY: "+LWY);
