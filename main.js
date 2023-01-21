@@ -35,7 +35,7 @@ function draw(){
         song2.stop();
         if(LS==false){
             song1.play();
-            document.getElementById("song").innerHTML="Song playing: Harry Potter Theme";
+            document.getElementById("nameDISPLAY").innerHTML="Song playing: Harry Potter Theme";
         }
     }
 }
@@ -58,5 +58,6 @@ function gotPoses(results){
         console.log("LWY: "+LWY);
         console.log("RWX: "+RWX);
         console.log("RWY: "+RWY);
+        console.log("keyLW: "+keyLW);
     }
 }
